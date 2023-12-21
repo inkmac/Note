@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const date = new Date()  // 获取当前时间
+        console.log(date)
+
+        const date1 = new Date('2023-10-1 08:10:10')    // 指定时间
+        console.log(date1)
+
+        date.toLocaleString()   // 2023-10-1 08:10:10
+        date.toLocaleDateString()  // 2023-10-1
+        date.toLocaleTimeString()  // 08:10:10
+        
+        // 时间戳
+        let timestamp = +new Date()
+        let timestamp1 = +new Date('2023-10-1 08:10:10')  // 指定时间时间戳
+
+        
+
+        /* 内置方法
+        getFullYear()       年
+        getMonth() + 1      月
+        getDate()           日
+        getDay() + 1        星期几
+        getHours() + 1      小时
+        getMinutes() + 1    分钟
+        getHours() + 1      秒
+        */
+    </script>
+</body>
+</html>

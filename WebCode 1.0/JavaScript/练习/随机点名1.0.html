@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            margin: 0 auto;
+
+            width: 400px;
+            height: 100px;
+            font-size: 60px;
+            text-align: center;
+        }
+
+        .text {
+            margin: 0 auto;
+            width: 300px;
+            height: 50px;
+            background-color: skyblue;
+            font-size: 25px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .start,
+        .end,
+        .reset {
+            display: inline-block;
+            margin: 15px;
+            padding: 0 3px;  /* 用padding更灵活 */
+
+            height: 40px;
+            font-size: 20px;
+            line-height: 40px;
+        }
+    
+        .buttons {
+            margin: 0 auto;
+
+            width: 400px;
+            height: 100px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .A,
+        .B {
+            display: block;
+            padding: 0 5px;
+            height: 50px;
+
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .A {
+            margin: 100px 0 0 0;
+        }
+
+        .B {
+            margin: 30px 0 0 0;
+        }
+
+        span {
+            color: red;
+        }
+
+        .modeSign {
+            margin: 20px 0 0 0;
+            width: 100px;
+            height: 30px;
+            background-color: skyblue;
+
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>随机点名</h1>
+    <div class="text">点击 <strong>开始</strong> 按钮开始</div>
+    <div class="buttons">
+        <button class="start" disabled>开始</button>
+        <button class="end" disabled>结束</button>
+        <button class="reset" disabled>再来一遍</button>
+    </div>
+
+
+    <button class="A">A模式</button>
+    <span>A: 每次开始上局选中的人会被踢出</span>
+    <button class="B">B模式</button>
+    <span>B: 每次开始上局选中的人不会被踢出</span>
+    <div class="modeSign">当前模式: <strong>A</strong></div>
+
+    <script>
+        
+        let arr = ['瑄', '赵', '黄', '杨', '泠', '徐', '张']
+        let arrCopied = []
+        for (let index = 0; index < arr.length; index++) {
+            arrCopied[index] = arr[index]
+        }
+        let mode = ''
+
+
+        // A 和 B
+        const A = document.querySelector('.A')
+        const B = document.querySelector('.B')
+        const modeSign = document.querySelector('.modeSign')
+        A.addEventListener('click', function() {
+            start.disabled = false
+            end.disabled = false
+            reset.disabled = false
+            mode = 'A'
+            modeSign.innerHTML = `当前模式: <strong>${mode}</strong>`
+        })
+
+        B.addEventListener('click', function() {
+            start.disabled = false
+            end.disabled = false
+            reset.disabled = false
+            mode = 'B'
+            modeSign.innerHTML = `当前模式: <strong>${mode}</strong>`
+        })
+
+
+        // start end reset
+        const text = document.querySelector('div')
+        const start = document.querySelector('.start')
+        const end = document.querySelector('.end')
+
+        let n
+        let random
+
+        start.addEventListener('click', function() {
+            n = setInterval(function() {
+                random = Math.floor(Math.random() * arr.length)  //随机数
+                text.innerHTML = arr[random]
+                end.disabled = false
+            }, 35)
+            start.disabled = true   // 关闭一次即可
+        })
+
+        end.addEventListener('click', function() {
+            clearInterval(n)
+            if (mode === 'A') {
+                arr.splice(random, 1)   //A模式删除被抽中的元素
+            }
+            
+            start.disabled = false
+            console.log(arr)
+
+            if (arr.length === 0) {
+                start.disabled = true
+                end.disabled = true
+            }
+        })
+
+        const reset = document.querySelector('.reset')
+        reset.addEventListener('click', function() {
+            start.disabled = false
+            end.disabled = false
+
+            for (let index = 0; index < arrCopied.length; index++) {
+                arr[index] = arrCopied[index];
+            }
+
+            text.innerHTML = "点击 <strong>开始</strong> 按钮开始"
+        })
+    </script>
+</body>
+</html>
+
+<!-- 
+    Made by ColourfulSteve 感谢游玩~
+    Made during  2023.12.06 20:30 --- 2023.12.08 17:24   Version: 1.0
+    Bug made totally: 1   longest time expense fixing: null
+ -->

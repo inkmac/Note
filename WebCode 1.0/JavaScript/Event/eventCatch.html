@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <script>
+        // 事件捕获: 从外往内依次执行直到该事件   true
+        // 事件冒泡: 从内往外依次执行   false
+
+        // event.stopPropagation()  阻止事件冒泡
+
+        const father = document.querySelector('.father')
+        const son = document.querySelector('.son')
+
+        document.addEventListener('click', function() {
+            alert("我是你爷爷~")
+        })
+
+        father.addEventListener('click', function() {
+            alert("我是你爸爸~")
+        })
+        
+        son.addEventListener('click', function(e) {
+            alert("儿子~")
+            e.stopPropagation()  // 阻止事件流动
+        })
+
+    </script>
+</body>
+</html>

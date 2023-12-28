@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <caption>
+            <strong> 学生成绩单 </strong>
+        </caption>
+        <tr>
+            <th> 姓名 </th>
+            <th> 成绩 </th>
+            <th> 评语 </th>
+        </tr>
+        <tr>
+            <td> BOB </td>
+            <td rowspan="2"> 114 </td>
+            <td> 666 </td>
+        </tr>
+        
+        <tr>
+            <td> Jeb </td>
+            <td> CEO </td>
+        </tr>
+    </table>
+
+    <!-- 写在<td>里面
+        <rowspan="N">   竖直合并n行, 只保留最上面的
+        <colspan="N">   水平合并n行, 只保存最左边的
+        不能合并不同结构标签的内容(thead,tbody,tfoot)
+     -->
+</body>
+</html>

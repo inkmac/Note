@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li:nth-child(n+3) {
+            background-color: pink;
+        }
+
+        /* 
+        E是标签
+        E:first-child {}  第一个
+        E:last-child {}  最后一个
+        E:nth-child(n) {}  从头开始第n个
+        E:nth-last-child(n) {}  从尾开始第n个
+
+        n可以写成公式 (n从0开始)
+        2n  偶数
+        2n+1  奇数
+        -n+3  前3个
+        n+3  从第3个开始
+        */
+    </style>
+</head>
+<body>
+    <ui>
+        <li>第1个标签</li>
+        <li>第2个标签</li>
+        <li>第3个标签</li>
+        <li>第4个标签</li>
+        <li>第5个标签</li>
+        <li>第6个标签</li>
+    </ui>
+</body>
+</html>

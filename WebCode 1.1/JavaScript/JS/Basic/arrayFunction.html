@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arr = [1, 2, 3, 4]
+
+        // forEach遍历
+        arr.forEach(function(item, index) {  // 第一个参数是值, 第二个参数是索引
+            console.log(item, index)
+        })
+
+        // map对数组进行操作, 返回一个arr
+        let newarr = arr.map(function(item) {
+            return item * 2 
+        })
+
+        // filter过滤器, 获取满足条件的元素, 返回一个arr
+        newarr = arr.filter(function(num) {
+            return num % 2 === 0
+        })
+
+        // reduce求和
+        // acc: 之前的所有累加和
+        // current: 当前值
+        // 100: accumlator的初始值, 不写默认为arr的第一个元素
+        let result = arr.reduce((acc, current) => {
+            return acc + current
+        }, 100)
+
+        // find 返回第一个满足条件的元素
+        result = arr.find(item => item === 3)
+
+        // every 查看所有元素是否都满足条件, 返回Boolean
+        result = arr.every(item => item > 10)
+        // some 查看是否有元素满足, 有一个就返回true, 否则为false
+        result = arr.some(item => item > 10)
+
+        
+    </script>
+</body>
+</html>

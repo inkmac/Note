@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input class="input" type="text" placeholder="电脑密码">
+    <input class="checkbox" type="checkbox">
+    <button>按钮</button>
+
+    <script>
+        const pwd = document.querySelector('.input')
+        // 用 pwd.value 获取用户输入的值
+        console.log(pwd.value)
+        // 设置值
+        pwd.value = "password"
+
+        const checkbox = document.querySelector('.checkbox')
+        checkbox.checked = true     // 默认选中
+
+        const button = document.querySelector('button')
+        button.disabled = true   // 禁用按钮
+
+    </script>
+</body>
+</html>

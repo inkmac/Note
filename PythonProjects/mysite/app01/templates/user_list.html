@@ -1,0 +1,21 @@
+{# django 推荐是用这种方式引入static文件 #}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>用户列表</h1>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    {# 如果想插入图片, css, js 等文件, 需要放置在static文件夹中 #}
+    <img src="{% static 'img/cartoon.png' %}" alt="load failed">
+</body>
+</html>

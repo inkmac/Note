@@ -1,0 +1,64 @@
+2023-07-04 22:49:13
+already logged and to HUB and Island
+2023-07-04 22:49:13
+prepare to working
+2023-07-04 22:51:19
+Not in garden
+2023-07-04 22:51:21
+now is in HUB
+2023-07-04 22:51:21
+already logged and to HUB and Island
+2023-07-04 22:53:47
+prepare to working
+2023-07-04 22:55:53
+Not in garden
+2023-07-04 22:55:55
+now is in HUB
+2023-07-04 22:55:55
+already logged and to HUB and Island
+2023-07-04 22:58:21
+prepare to working
+2023-07-04 23:00:26
+already logged and to HUB and Island
+2023-07-04 23:00:26
+prepare to working
+2023-07-04 23:05:21
+Not in garden
+2023-07-04 23:05:22
+now is in HUB
+2023-07-04 23:05:22
+already logged and to HUB and Island
+2023-07-04 23:07:48
+prepare to working
+2023-07-04 23:14:50
+Not in garden
+2023-07-04 23:14:51
+now is in HUB
+2023-07-04 23:14:51
+already logged and to HUB and Island
+2023-07-04 23:16:22
+already logged and to HUB and Island
+2023-07-04 23:16:22
+prepare to working
+2023-07-04 23:17:02
+Not in garden
+2023-07-04 23:17:03
+now is in island
+2023-07-04 23:17:03
+already logged and to HUB and Island
+2023-07-04 23:19:29
+prepare to working
+2023-07-04 23:20:09
+Not in garden
+2023-07-04 23:20:10
+now is in island
+2023-07-04 23:20:10
+already logged and to HUB and Island
+2023-07-04 23:22:35
+prepare to working
+2023-07-05 03:00:35
+Not in garden
+2023-07-05 03:00:37
+lost communication, to check server list
+2023-07-05 03:00:39
+found server list

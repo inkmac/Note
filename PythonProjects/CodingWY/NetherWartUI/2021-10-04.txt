@@ -1,0 +1,70 @@
+2021-10-04 09:48:42
+already logged and to HUB and Island
+2021-10-04 09:48:42
+prepare to working
+2021-10-04 11:04:54
+already logged and to HUB and Island
+2021-10-04 11:04:54
+prepare to working
+2021-10-04 11:05:58
+already logged and to HUB and Island
+2021-10-04 11:05:58
+prepare to working
+2021-10-04 11:06:20
+lost communication, to check server list
+2021-10-04 11:06:22
+no server list found
+2021-10-04 11:06:55
+PollingTrip time1, total is1
+2021-10-04 11:06:56
+current in island
+2021-10-04 11:14:16
+already logged and to HUB and Island
+2021-10-04 11:14:16
+prepare to working
+2021-10-04 11:14:39
+lost communication, to check server list
+2021-10-04 11:14:41
+no server list found
+2021-10-04 11:17:22
+already logged and to HUB and Island
+2021-10-04 11:17:22
+prepare to working
+2021-10-04 11:21:03
+already logged and to HUB and Island
+2021-10-04 11:21:03
+prepare to working
+2021-10-04 11:23:54
+already logged and to HUB and Island
+2021-10-04 11:23:54
+prepare to working
+2021-10-04 11:27:01
+already logged and to HUB and Island
+2021-10-04 11:27:01
+prepare to working
+2021-10-04 11:28:25
+Not in Island, prepare tp island
+2021-10-04 11:29:37
+PollingTrip time1, total is1
+2021-10-04 11:29:38
+current in island
+2021-10-04 11:29:38
+putChestTime is1. PollingTrip is 1. putChestTime will be add 1.
+2021-10-04 11:30:10
+PollingTrip time2, total is2
+2021-10-04 11:30:11
+current in island
+2021-10-04 11:30:11
+putChestTime is3. PollingTrip is 2. putChestTime will be add 1.
+2021-10-04 11:30:43
+PollingTrip time3, total is3
+2021-10-04 11:30:44
+current in island
+2021-10-04 11:30:44
+putChestTime is4. PollingTrip is 3. putChestTime will be add 1.
+2021-10-04 11:31:16
+PollingTrip time4, total is4
+2021-10-04 11:31:17
+current in island
+2021-10-04 11:31:17
+putChestTime is5. PollingTrip is 4. putChestTime will be add 1.

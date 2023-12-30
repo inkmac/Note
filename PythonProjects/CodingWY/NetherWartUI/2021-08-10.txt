@@ -1,0 +1,314 @@
+2021-08-10 08:26:43
+already logged and to HUB and Island
+2021-08-10 08:26:43
+prepare to working
+2021-08-10 08:27:16
+polling time1, total is1
+2021-08-10 08:27:17
+lost communication, to check server list
+2021-08-10 08:27:20
+no server list found
+2021-08-10 08:27:41
+already logged and to HUB and Island
+2021-08-10 08:27:41
+prepare to working
+2021-08-10 08:27:45
+polling time1, total is1
+2021-08-10 08:27:46
+lost communication, to check server list
+2021-08-10 08:27:48
+no server list found
+2021-08-10 08:27:50
+polling time2, total is2
+2021-08-10 08:27:51
+lost communication, to check server list
+2021-08-10 08:27:54
+no server list found
+2021-08-10 08:27:56
+polling time3, total is3
+2021-08-10 08:27:57
+lost communication, to check server list
+2021-08-10 08:29:28
+already logged and to HUB and Island
+2021-08-10 08:29:28
+prepare to working
+2021-08-10 08:29:31
+polling time1, total is1
+2021-08-10 08:29:33
+lost communication, to check server list
+2021-08-10 08:29:35
+no server list found
+2021-08-10 08:29:37
+polling time2, total is2
+2021-08-10 08:29:38
+lost communication, to check server list
+2021-08-10 08:29:40
+no server list found
+2021-08-10 08:29:43
+polling time3, total is3
+2021-08-10 08:29:44
+lost communication, to check server list
+2021-08-10 08:29:46
+no server list found
+2021-08-10 08:29:49
+polling time4, total is4
+2021-08-10 08:29:50
+lost communication, to check server list
+2021-08-10 08:29:52
+no server list found
+2021-08-10 08:29:54
+polling time5, total is5
+2021-08-10 08:29:55
+lost communication, to check server list
+2021-08-10 08:29:57
+no server list found
+2021-08-10 08:30:00
+polling time6, total is6
+2021-08-10 08:30:01
+lost communication, to check server list
+2021-08-10 08:30:03
+no server list found
+2021-08-10 08:30:06
+polling time7, total is7
+2021-08-10 08:30:07
+lost communication, to check server list
+2021-08-10 08:30:09
+no server list found
+2021-08-10 08:30:11
+polling time8, total is8
+2021-08-10 08:30:13
+lost communication, to check server list
+2021-08-10 08:30:15
+no server list found
+2021-08-10 08:30:17
+polling time9, total is9
+2021-08-10 08:30:18
+lost communication, to check server list
+2021-08-10 08:30:20
+no server list found
+2021-08-10 08:30:23
+polling time10, total is10
+2021-08-10 08:30:24
+lost communication, to check server list
+2021-08-10 08:30:26
+no server list found
+2021-08-10 08:30:29
+polling time11, total is11
+2021-08-10 08:31:09
+already logged and to HUB and Island
+2021-08-10 08:31:09
+prepare to working
+2021-08-10 08:31:12
+polling time1, total is1
+2021-08-10 08:31:13
+lost communication, to check server list
+2021-08-10 08:31:15
+no server list found
+2021-08-10 08:31:17
+polling time2, total is2
+2021-08-10 08:31:18
+lost communication, to check server list
+2021-08-10 08:31:21
+no server list found
+2021-08-10 08:31:23
+polling time3, total is3
+2021-08-10 08:31:24
+lost communication, to check server list
+2021-08-10 08:31:26
+no server list found
+2021-08-10 08:32:54
+already logged and to HUB and Island
+2021-08-10 08:32:54
+prepare to working
+2021-08-10 08:32:58
+already logged and to HUB and Island
+2021-08-10 08:32:58
+prepare to working
+2021-08-10 08:33:01
+polling time1, total is1
+2021-08-10 08:33:02
+lost communication, to check server list
+2021-08-10 08:33:04
+no server list found
+2021-08-10 08:33:07
+polling time2, total is2
+2021-08-10 08:33:08
+lost communication, to check server list
+2021-08-10 08:33:10
+no server list found
+2021-08-10 08:33:13
+polling time3, total is3
+2021-08-10 08:33:14
+lost communication, to check server list
+2021-08-10 08:33:16
+no server list found
+2021-08-10 08:33:18
+polling time4, total is4
+2021-08-10 08:33:19
+lost communication, to check server list
+2021-08-10 08:33:21
+no server list found
+2021-08-10 08:33:24
+polling time5, total is5
+2021-08-10 08:33:25
+lost communication, to check server list
+2021-08-10 08:33:27
+no server list found
+2021-08-10 08:33:29
+polling time6, total is6
+2021-08-10 08:33:30
+lost communication, to check server list
+2021-08-10 08:33:32
+no server list found
+2021-08-10 08:33:35
+polling time7, total is7
+2021-08-10 08:33:36
+lost communication, to check server list
+2021-08-10 08:50:41
+already logged and to HUB and Island
+2021-08-10 08:50:41
+prepare to working
+2021-08-10 08:50:44
+polling time1, total is1
+2021-08-10 08:50:45
+lost communication, to check server list
+2021-08-10 08:50:47
+no server list found
+2021-08-10 08:50:50
+polling time2, total is2
+2021-08-10 08:50:51
+lost communication, to check server list
+2021-08-10 08:50:53
+no server list found
+2021-08-10 08:50:56
+polling time3, total is3
+2021-08-10 21:31:07
+already logged and to HUB and Island
+2021-08-10 21:31:07
+prepare to working
+2021-08-10 21:31:39
+polling time1, total is1
+2021-08-10 21:31:40
+current in island
+2021-08-10 21:31:49
+did not find back to game menu
+2021-08-10 21:31:49
+put block in chest
+2021-08-10 21:33:48
+already logged and to HUB and Island
+2021-08-10 21:33:48
+prepare to working
+2021-08-10 21:34:20
+polling time1, total is1
+2021-08-10 21:34:21
+current in island
+2021-08-10 21:34:30
+did not find back to game menu
+2021-08-10 21:34:30
+put block in chest
+2021-08-10 21:35:02
+polling time2, total is2
+2021-08-10 21:35:03
+current in island
+2021-08-10 21:35:11
+did not find back to game menu
+2021-08-10 21:35:11
+put block in chest
+2021-08-10 21:35:43
+polling time3, total is3
+2021-08-10 21:35:44
+current in island
+2021-08-10 21:38:00
+already logged and to HUB and Island
+2021-08-10 21:38:00
+prepare to working
+2021-08-10 21:38:33
+polling time1, total is1
+2021-08-10 21:38:34
+current in island
+2021-08-10 21:38:43
+did not find back to game menu
+2021-08-10 21:38:43
+put block in chest
+2021-08-10 21:39:15
+polling time2, total is2
+2021-08-10 21:39:16
+current in island
+2021-08-10 21:39:48
+polling time3, total is3
+2021-08-10 21:39:49
+current in island
+2021-08-10 21:39:58
+did not find back to game menu
+2021-08-10 21:39:58
+put block in chest
+2021-08-10 21:40:30
+polling time4, total is4
+2021-08-10 21:40:31
+current in island
+2021-08-10 21:40:40
+did not find back to game menu
+2021-08-10 21:40:40
+put block in chest
+2021-08-10 21:41:12
+polling time5, total is5
+2021-08-10 21:41:12
+current in island
+2021-08-10 21:41:21
+did not find back to game menu
+2021-08-10 21:41:21
+put block in chest
+2021-08-10 21:42:10
+already logged and to HUB and Island
+2021-08-10 21:42:10
+prepare to working
+2021-08-10 21:42:42
+polling time1, total is1
+2021-08-10 21:42:43
+current in island
+2021-08-10 21:42:52
+did not find back to game menu
+2021-08-10 21:42:52
+put block in chest
+2021-08-10 21:43:25
+polling time2, total is2
+2021-08-10 21:43:25
+current in island
+2021-08-10 21:43:57
+polling time3, total is3
+2021-08-10 21:43:58
+current in island
+2021-08-10 21:44:30
+polling time4, total is4
+2021-08-10 21:44:31
+current in island
+2021-08-10 21:45:03
+polling time5, total is5
+2021-08-10 21:45:04
+current in island
+2021-08-10 21:45:36
+polling time6, total is6
+2021-08-10 21:45:37
+current in island
+2021-08-10 21:46:09
+polling time7, total is7
+2021-08-10 21:46:09
+current in island
+2021-08-10 21:46:19
+did not find back to game menu
+2021-08-10 21:46:19
+put block in chest
+2021-08-10 21:46:51
+polling time8, total is8
+2021-08-10 21:46:52
+current in island
+2021-08-10 21:47:11
+already logged and to HUB and Island
+2021-08-10 21:47:11
+prepare to working
+2021-08-10 21:47:44
+polling time1, total is1
+2021-08-10 21:47:45
+current in island
+2021-08-10 21:47:56
+puc chest failure, prepare to HUB

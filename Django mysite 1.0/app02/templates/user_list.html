@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div>
+        <div class="container">
+            <div style="margin-bottom: 10px;">
+                <a class="btn btn-warning" href="/app02/user/add/">新建用户</a>
+                <a class="btn btn-warning" href="/app02/user/modelform/add/">新建用户ModelForm</a>
+            </div>
+
+            <table class="table table-bordered table-striped text-center">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">name</th>
+                  <th scope="col">pwd</th>
+                  <th scope="col">depart</th>
+                  <th scope="col">modify</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                {% for each in queryset %}
+                <tr>
+                  <th scope="row">{{ each.id }}</th>
+                  <td>{{ each.name }}</td>
+                  <td>{{ each.pwd }}</td>
+                  <td>{{ each.department.title }}</td>
+                  <td>
+                      <a class="btn btn-primary" href="/app02/user/{{ each.id }}/edit/">编辑</a>
+                      <a class="btn btn-danger" href="/app02/user/delete/?nid={{ each.id }}">删除</a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+
+            <div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        {{ page_str }}
+                    </ul>
+                    <form class="d-flex" role="search" method="get" style="width: 250px;">
+                        <input name="page" class="form-control me-2" type="search" placeholder="页数" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

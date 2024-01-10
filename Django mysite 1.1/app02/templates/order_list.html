@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            新建订单 CSS
+        </button>
+        <button type="button" id="btnAdd" class="btn btn-primary">
+            新建订单 JS
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">新建</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <form id="formAdd">
+                    {% for field in form %}
+                        <div style="margin: 10px">
+                            <label>{{ field.label }}</label>
+                            {{ field }}
+                            <span class="error-msg" style="color: red"></span>
+                        </div>
+                    {% endfor %}
+                </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" id="btnCancel" class="btn btn-secondary" data-bs-dismiss="modal">取 消</button>
+            <button type="button" id="btnSave" class="btn btn-primary">保 存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function() {
+            btnAdd()
+            btnSave()
+        })
+
+        function btnAdd() {
+            $("#btnAdd").click(function() {
+                $("#exampleModal").modal('show')
+            })
+        }
+
+        function btnSave() {
+            $("#btnSave").click(function() {
+                // 清除错误信息
+                $(".error-msg").text("")
+
+                $.ajax({
+                    url: "/app02/order/add/",
+                    type: "post",
+                    data: $("#formAdd").serialize(),
+                    dataType: "JSON",
+                    success: function(res) {
+                        console.log(res)
+                        if (res.status) {
+                            alert("A")
+                        } else {
+                            $.each(res.error, function(name, err) {
+                                $("#id_" + name).next().text(err[0])
+                            })
+                        }
+                    }
+                })
+            })
+        }
+    </script>
+{% endblock %}

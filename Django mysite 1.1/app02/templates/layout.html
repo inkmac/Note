@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-5.3.2-dist/css/bootstrap.min.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 20px;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">管理系统</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/app02/admin/list/">管理员账号</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/app02/user/list/">用户管理</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/app02/pretty/list/">靓号管理</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/task/">任务管理</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/app02/order/list/">订单管理</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <div class="text-end">
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ request.session.info.name }}
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="#">个人信息</a></li>
+                    <li><a class="dropdown-item" href="#">账号设置</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/app02/logout/">退出登录</a></li>
+                </ul>
+            </div>
+          </div>
+      </div>
+    </nav>
+
+    {# 意思就是继承了这个模版, 就只需要写block里面的内容 #}
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+    {#  可以设置多个block  #}
+    {#  {% block content %}...{% endblock %} 区域内的内容是默认内容, 子模版未提供具体内容时, 显示该内容 #}
+
+<script src="{% static 'plugins/jquery-3.7.1.js' %}"></script>
+<script src="{% static 'plugins/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js' %}"></script>
+{% block js %}{% endblock %}
+</body>
+</html>

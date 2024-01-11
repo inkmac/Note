@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>{{ n1 }}</div>  {# n1 的值就是函数里面 n1 对应的 value #}
+    <div>{{ n2 }}</div>
+    <div>{{ n2.1 }}</div>  {# n2.1 代表 roles[1] #}
+
+    {# 遍历array #}
+    {% for item in n2 %}
+        <span>{{ item }}</span>
+    {% endfor %}
+
+    {# 遍历字典 #}
+    {# keys: k  values: v  items: k-v #}
+    <ul>
+        {% for k,v in info.items %}
+            <li>{{ k }} = {{ v }}</li>
+        {% endfor %}
+    </ul>
+
+    {# if语句 #}
+    {% if n1 == "BOB" %}
+         <span>find BOB</span>
+    {% elif n1 == "BOBOB" %}
+        <span>This is BOBOB</span>
+    {% else %}
+        <span>Else BOB</span>
+    {% endif %}
+</body>
+</html>

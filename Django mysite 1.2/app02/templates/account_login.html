@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-5.3.2-dist/css/bootstrap.min.css' %}">`
+</head>
+<body>
+    <div id="app">
+        <div style="width: 400px; margin: 100px auto; text-align: center; border: 1px solid #eee; padding: 30px 0 50px 0;
+        border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+            <div style="width: 80%; margin: 0 auto ">
+                <div style="margin: 20px; color: #0c63e4">
+                    <h2>登录</h2>
+                </div>
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">用户名: </span>
+                        {{ form.username }}
+                        <span style="color: red">{{ form.username.errors.0 }}</span>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">密码: </span>
+                        {{ form.pwd }}
+                        <span style="color: red">{{ form.pwd.errors.0 }}</span>
+                    </div>
+                    <div class="mb-3">
+                        <h6 style="color: #0a53be">图片验证码</h6>
+                        <div class="row">
+                            <div class="col-7">
+                                {{ form.code }}
+                                <span style="color: red">{{ form.pwd.errors.0 }}</span>
+                            </div>
+                            <div class="col-5">
+                                <img id="image_code" src="/image/code/" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button style="width: 100%" class="btn btn-primary">登录</button>
+                    </div>
+                    <div style="text-align: right;"><a href="#">前往注册</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

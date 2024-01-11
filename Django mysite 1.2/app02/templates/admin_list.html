@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <div style="margin-bottom: 10px;">
+            <a class="btn btn-warning" href="/app02/admin/add/">新建管理员</a>
+            <div style="float: right; width: 300px;">
+                <form method="get" class="d-flex" role="search">
+                    <input name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={{ search_data }}>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped text-center">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">用户名</th>
+              <th scope="col">密码</th>
+              <th scope="col">modify</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            {% for each in queryset %}
+            <tr>
+              <th scope="row">{{ each.id }}</th>
+              <td>{{ each.username }}</td>
+              <td>{{ each.pwd }}</td>
+              <td>
+                  <a class="btn btn-primary" href="/app02/admin/{{ each.id }}/edit/">编辑</a>
+                  <a class="btn btn-danger" href="/app02/admin/{{ each.id }}/delete/">删除</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+{% endblock %}

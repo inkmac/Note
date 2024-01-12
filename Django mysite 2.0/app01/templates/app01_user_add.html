@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/user/add/">
+        {% csrf_token %}    {# 安全校验 加在form里面 #}
+
+        <input type="text" name="user" placeholder="User:">
+        <input type="password" name="pwd" placeholder="Password:">
+        <input type="submit" value="注册账户">
+        <span>{{ res }}</span>
+    </form>
+</body>
+</html>

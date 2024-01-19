@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h2 class="page-header">基本使用</h2> <hr>
+    <button class="btn btn-primary">发送请求</button>
+    <button class="btn btn-primary">取消请求</button>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    let btns = document.querySelectorAll("button");
+
+    // 2.声明全局变量
+    let cancel = null;
+
+    btns[0].addEventListener('click', function() {
+      // 检测上次请求是否结束
+      if (cancel !== null) {
+        // 取消上一次的请求
+        cancel();
+      }
+
+      axios({
+        method: "GET",
+        url: "http://localhost:3000/posts",
+        
+        // 1.添加配置对象的属性 用于取消request
+        cancelToken: new axios.CancelToken(function(c) {
+          // 3.将c赋值给cancel, c是一个函数, 用于取消请求。
+          cancel = c;
+        }),
+      }).then(res => {
+        console.log(res);
+        cancel = null;   // 复原cancel
+      });
+    });
+
+    btns[1].addEventListener('click', function() {
+      if (cancel !== null) {
+        cancel();  
+      } else {
+        console.log("You haven't start a request");
+      }
+    })
+  </script>
+</body>
+</html>

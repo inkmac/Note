@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let person = {   //k-v对
+            name: "BOB",
+            age: 10,
+            
+            say: function() {
+                document.write("This is say() in person class")
+            }
+        }
+        
+        const name = person.name   // 访问value 
+
+        // for-in 遍历对象
+        for (const key in person) {    // for-in取出来的key默认是String型
+            console.log(key)  
+            console.log(person[key])    // 用 obj["属性名"] 访问value
+        }
+
+        
+        keys = Object.keys(person)  
+        values = Object.values(person)
+        
+    </script>
+</body>
+</html>

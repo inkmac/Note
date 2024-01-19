@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script>
+        const box = document.querySelector(".box")
+
+        // 生成的是行内样式表, 权重很高, 仅次于 !important
+        box.style.width = '300px'   // 字符串 + 单位
+        // 多组单词的采取小驼峰写法
+        box.style.backgroundColor = 'blue' 
+    </script>
+</body>
+</html>

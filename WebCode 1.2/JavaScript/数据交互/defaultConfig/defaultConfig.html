@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h2 class="page-header">基本使用</h2> <hr>
+    <button class="btn btn-primary">发送GET请求</button>
+    <button class="btn btn-primary">发送POST请求</button>
+    <button class="btn btn-primary">发送PUT请求</button>
+    <button class="btn btn-primary">发送DELETE请求</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const btns = document.querySelectorAll("button");
+
+    axios.defaults.method = "GET";  // 设置默认请求类型为GET
+    axios.defaults.baseURL = 'http://localhost:3000';  // 设置根URL
+    axios.defaults.params = {id: 100};  // 设置查询参数
+    axios.defaults.timeout = 3000   // 超时时间 (单位:ms)
+
+    btns[0].addEventListener('click', function() {
+      axios({
+        url: '/posts'
+      }).then(res => console.log(res))
+    })
+
+  </script>
+</body>
+</html>

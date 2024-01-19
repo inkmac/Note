@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let person = {
+      name: "Jeb",
+      gender: "男",
+      // age: 18
+    }
+    console.log(person); 
+    
+    let number = 30;
+
+    Object.defineProperty(person, 'age', {
+      // value: 120,        // 设置age的值
+      // enumerable: true,    // 控制是否可以枚举, 默认不可枚举
+      // writable: true,    // 控制属性是否可以给被修改? 默认false
+      // configurable: true,   // 控制属性是否可以给被删除? 默认false
+
+      get() {
+        return "get100"
+      },
+
+      set(value) {
+        number = value;
+      },
+    })
+  </script>
+</body>
+</html>

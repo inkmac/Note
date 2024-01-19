@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .father::before {   
+            content: "老鼠";    /* 必须有content, 否则不生效 */
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            display: inline-block;
+        }
+
+        .father::after {    /* 使用伪元素可以在不改变HTML结构的情况下添加样式和内容 */
+            content: "大米";
+        }
+    </style>
+</head>
+<body>
+    <div class="father">爱</div>
+</body>
+</html>

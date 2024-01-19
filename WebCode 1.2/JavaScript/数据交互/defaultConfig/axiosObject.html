@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h2 class="page-header">基本使用</h2> <hr>
+    <button class="btn btn-primary">发送GET请求</button>
+    <button class="btn btn-primary">发送POST请求</button>
+    <button class="btn btn-primary">发送PUT请求</button>
+    <button class="btn btn-primary">发送DELETE请求</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const btns = document.querySelectorAll("button");
+    
+    // 创建一个axios实例, 具有自己的配置
+    const instance = axios.create({
+      baseURL: 'http://localhost:3000',
+      timeout: 2000
+    });
+
+    // 使用
+    instance({
+      method: "GET"
+    }).then(res => console.log(res))
+  </script>
+</body>
+</html>

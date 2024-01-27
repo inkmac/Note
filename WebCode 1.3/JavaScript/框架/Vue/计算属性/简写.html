@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    姓: <input type="text" v-model="firstName"> <br>
+    名: <input type="text" v-model="LastName"> <br>
+    全名: <span>{{ fullName }}</span>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#container',
+      data: {
+        firstName: "张",
+        LastName: "三",
+      },
+      computed: {
+        // 简写: 只读不写的情况下才可以简写 (也就是没有set方法)
+        fullName() {
+          console.log("这是简写方式, 没有set方法");
+          return this.firstName + ' - ' + this.LastName; 
+        }
+      }
+    })
+  </script>
+</body>
+</html>

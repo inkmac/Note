@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function Person() {
+            this.ears = 2
+            this.head = 1
+        }
+
+        function Star(name) {
+            this.name = name
+        }
+
+        // prototype相当于父对象, 里面只有constructor
+        // 其中的constructor属性指向了Star的构造函数
+        
+        Star.prototype = new Person()   // 继承Person对象
+        Star.prototype.constrcutor = Star  // 上面那条指令导致prototype的构造器被重置, 需要重新指回Star
+        
+        // 原型方法, 给父对象添加方法, 然后Star继承然后可以使用
+        Star.prototype.sing = function() {
+             console.log("Hello, World", this.name)
+        }
+
+
+        const a = new Star("A")
+        console.log(a)
+        a.sing()
+    </script>   
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    姓: <input type="text" v-model="firstName"> <br>
+    名: <input type="text" v-model="LastName"> <br>
+    全名: <span>{{ fullName }}</span>
+    <!-- fullName不要加(), 因为存储在vm里面的是fullName, vm.fullName的值就是get()返回的值 -->
+  </div>
+
+  <script src="../vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#container',
+      data: {
+        firstName: "张",
+        LastName: "三",
+      },
+      computed: {
+        fullName: {
+          get() {
+            console.log("get() 被调用");
+            // 此处this是vm, 用this调用数据
+            return this.firstName + ' - ' + this.LastName; 
+          },
+
+          set(v) {
+            console.log(v);
+            const arr = v.split("-")
+            this.firstName = arr[0];
+            this.LastName = arr[1];
+            
+            // 不能直接修改fullName值, 因为
+            // set修改fullName -> fullName被修改 -> 调用set -> set修改fullName -> ...
+          }
+        }
+      },
+    })
+  </script>
+</body>
+</html>

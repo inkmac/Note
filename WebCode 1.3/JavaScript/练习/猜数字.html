@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function guessNum() {
+            let randomNumber = Math.floor(Math.random() * 100) + 1;
+            let max = 100
+            let min = 0
+
+            while (true) {
+                let input = +prompt("输入您猜测的数字")
+                if (!(input <= max && input >= min)) {
+                    alert("WARNING!!!!!!!!\n输入有误\n" + `请输入${min} - ${max}之间的整数`)
+                    continue
+                }
+                
+
+                if (randomNumber < input) {
+                    if (input <= max) {
+                        max = input - 1
+                    }
+                    alert("输入的值大了\n" + `剩余范围: ${min} - ${max}`)
+                    
+                } else if (input < randomNumber) {
+                    if (min <= input) {
+                        min = input + 1
+                    }
+                    alert("输入的值小了\n" + `剩余范围: ${min} - ${max}`)
+
+                } else {
+                    alert("答对了~~~~\n~~~~\n~~~~\n~~~~\n~~~~")
+                    break
+                }
+            }
+        }
+
+        while (true) {
+            guessNum()
+            let loop = prompt("还要继续吗? 输入'n'退出")
+            if (loop === "n") {
+                alert("感谢游玩; Made by ColourfulSteve~")
+                break
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 40px;
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #edeef0;
+        }
+
+        .box a {    /* 选中box类中的a */
+            padding: 0 16px;
+            /* width: 80px; */
+            height: 40px;
+            display: inline-block;   /* 这个转换模式很重要!!! */
+            text-align: center;
+            line-height: 40px;
+            font-size: 12px;
+            color: #4c4c4c;
+            text-decoration: none;
+        }
+
+        .box a:hover {
+            background-color: #edeef0;
+            color: #ff8400;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+        <a href="#">新浪导航</a>
+    </div>
+</body>
+</html>

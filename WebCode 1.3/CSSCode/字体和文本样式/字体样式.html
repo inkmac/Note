@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p { 
+            font-size: 30px;    /* 必须加上px; 网页默认字体大小为16px */
+
+            font-weight: 700;   /* 设置字体粗细  normal: 400; bold: 700 */
+
+            font-style: italic;
+
+            font-family: 微软雅黑, 黑体, sans-serif;    /* 先使用第一个, 如果没有下载就往后找 */
+        }
+
+        div {
+            color: red;
+            color: blue;    /* 后面会覆盖前面的 */
+        }
+
+        span {
+            /* font: style weight size/line-hight 字体;  可省略前两个 */
+            font: italic 700 65px/30px 宋体;
+        }
+        
+    </style>
+</head>
+<body>
+    <p> ppppp </p>
+    <div> divdivdiv </div>  <br> <br>
+    <span> span tag </span>
+</body>
+</html>

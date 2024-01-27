@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .basic {
+      width: 100px;
+      height: 100px;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .skyblue {
+      background-color: skyblue;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <!-- 绑定class样式 字符串写法, 适用于: 样式类名不确定, 需要动态指定 -->
+    <div class="basic" :class="color" @click="changeColor">Test</div>
+
+    <!-- 绑定class样式 数组写法, 适用于: 样式个数不确定, 名字也不确定 -->
+    <div class="basic" :class="classArr">Test2</div>
+
+    <!-- 绑定class样式 对象写法, 适用于: 样式个数确定, 名字也确定, 但需要动态决定用不用 -->
+    <div class="basic" :class="classObj">Test3</div>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: "#container",
+      data: {
+        color: 'green',
+        classArr: ['skyblue', 'green', 'pink'],
+        classObj: {
+          skyblue: false,
+          green: false,
+          pink: false,
+        },
+      },
+      methods: {
+        changeColor() {
+          const arr = ['skyblue', 'green', 'pink']
+          const index = Math.floor(Math.random() * 3)
+          this.color = arr[index]
+        },
+      },
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    key就是每个<li>的唯一标识符, 用于帮助Vue判断哪些元素是新增或删除的
+    
+    选择key需要选择每条数据的唯一标识符当做key, 并且确保key不会变化
+
+    如果key不写, 默认是用<li>的index当做key, 但是会出现问题 
+      (eg: 逆序增加, 逆序删除等破坏顺序的操作 -> index变化 -> bug)
+   -->
+  <div id="container">
+    <h2>人员列表(遍历数组)</h2>
+    <button @click="add">添加一个老刘</button>
+    <ul>
+      <li v-for="p in persons" :key="p.id">
+        {{p.name}} - {{p.age}}
+        <input type="text">
+      </li>
+    </ul>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script>
+    new Vue({
+      el: "#container",
+      data: {
+        persons:[
+          {id: '01', name: '张三', age: 18},
+          {id: '02', name: '李四', age: 19},
+          {id: '03', name: '王五', age: 20},
+        ]
+      },
+      methods: {
+        add() {
+          const p = {id: '04', name: "老刘", age: 114514}  
+          this.persons.unshift(p)
+        }
+      },
+    })
+  </script>
+</body>
+</html>

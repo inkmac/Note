@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮 正常函数</button> <hr>
+    <button>按钮 箭头函数</button>
+
+    <script>
+        const btns = document.querySelectorAll('button')
+
+        btns[0].addEventListener('click', function() {
+            console.log("正常函数", this)   // this 指向 btn
+        })
+
+        // 由于是箭头函数, 没有自己的this, 会向外再找一层, 从windows -> btn
+        btns[1].addEventListener('click', function() {
+            setTimeout(() => {    // setTimeout实际是由windows调用的
+                console.log("箭头函数", this);
+            }, 500)
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function Person() {
+            this.ears = 2
+            this.head = 1
+        }
+
+        function Star(name) {
+            this.name = name
+            this.fans = 1000
+        }
+        
+        console.log(Star.prototype);    
+        // prototype是对象的原型, 里面有constructor属性
+        // 其中的constructor属性指向了Star的构造函数
+        
+        Star.prototype = new Person()    // 继承Person对象
+        Star.prototype.constrcutor = Star  
+        // 上面那条指令会导致Star.prototype的构造器被重置, 需要重新指回Star构造函数
+        // 不过通常情况下, JS可以自动推断出constructor, 然后自动修改, 不需要手动设置
+
+        // 原型方法, 给原型添加方法, 然后Star的实例对象可以通过原型找到并使用
+        Star.prototype.sing = function() {
+             console.log("Hello, World", this.name)
+        }
+
+        const a = new Star("A")
+        console.log(a)
+        a.sing()
+    </script>   
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <div v-text="str"></div>  <!-- 不会解析文本 -->
+    <div v-html="str"></div>  <!-- 会解析文本 (有用户输入的话不要用, 可能会被攻击) -->
+  </div>
+  
+  <script src="../vue.js"></script>
+  <script>
+    new Vue({
+      el: "#container",
+      data: {
+        str: '<h3> Big Title </h3>'
+      }
+    })
+  </script>
+</body>
+</html>

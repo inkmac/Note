@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"> This is div </div>
+
+    <script>
+        // 只适用于双标签, 获取双标签中的文本
+        const box = document.querySelector(".box")
+        console.log(box.innerText)    // 获取文字内容
+        box.innerText = "Modify innerText"   // 修改文字内容, 纯文本输出(不解析标签)
+        
+        // innerHTML 会解析标签
+        box.innerHTML = "<strong> innerHTML </strong>"
+
+    </script>
+</body>
+</html>

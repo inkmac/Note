@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 浮动元素脱离标准流, 在标准流不占位置 */
+        /* 浮动的标签无法水平居中 */
+        /* 浮动元素一行可以显示多个, 且可以设置宽高 */
+        div {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        .one {
+            background-color: pink;
+            float: left;
+        }       
+
+        .two {
+            background-color: skyblue;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">one</div>  
+    <div class="two">two</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 构造器
+        function Person(uname) {
+            this.uname = uname   // 写在构造器的算实例成员
+        }
+
+        Person.info = "im class member's info"   // 用类名定义的是静态成员
+
+        const bob = new Person("BOB")   // 建立新对象
+        bob.info = "im Object memebr's info"  // 用实例名定义的是实例成员, 但仅限这个对象使用
+        bob.sayHi = function() {
+            console.log("Hi")
+        }
+    </script>
+</body>
+</html>

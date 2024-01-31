@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="container">
+    <h1>Hello, {{name}} ; Time by {{Date.now()}}</h1>
+
+    <a v-bind:href="url"></a>
+    <a :href="url"></a>  <!-- v-bind: 可以简写成 : -->
+  </div>
+    
+  
+  <script src="../vue.js"></script>
+  <script>
+    // 创建Vue实例, 1对1
+    const x = new Vue({
+      el: '#container',    // el用于指定当前Vue实例为哪个容器服务
+      data: {
+        name: "Vue",
+        url: "https://chat.openai.com/"
+      },
+    });
+      
+  </script>
+</body>
+</html>

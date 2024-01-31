@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 绝对定位:
+            先找已经定位的父级, 如果有这样的父级就以该父级为参照物
+            如果父级没有定位, 以浏览器窗口为参照物
+            */
+            position: absolute;
+            left: 100px;    
+            top: 200px;
+
+            /* 
+            1.
+            2.
+            3.
+            */
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <p>ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp</p>
+    <p>ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp</p>
+    <p>ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp</p>
+    <div class="box">box</div>
+    <p>ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp</p>
+    <p>ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp</p>
+    <p>ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp</p>
+</body>
+</html>

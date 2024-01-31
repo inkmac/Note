@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <h1>{{name}}</h1>
+  </div>
+
+
+  <script src="../vue.js"></script>
+  <script>
+    // 由Vue管理的函数, 不要写箭头函数, 否则this就不指向Vue对象了
+
+    const v = new Vue({
+      // el: '#container',  // 第一种写法
+      data: {
+        name: 'Vue',
+      }
+    });
+    v.$mount('#container');  // 第二种写法
+
+
+    const v2 = new Vue({
+      el: '#container',
+      // data: {
+      //   name: "Vue"   // 第一种写法
+      // }
+
+      data() {    // Vue会自动调用
+        console.log(this);   // this是Vue对象
+        return {
+          name: "Vue"    // 第二种写法
+        };
+      }
+    });
+  </script>
+</body>
+</html>

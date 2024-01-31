@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- data- 自定义属性 -->
+    <div data-id="1" data-spm="unknown">1</div>
+    <div data-id="2">2</div>
+    <div data-id="3">3</div>
+
+    <script>
+        const one = document.querySelector('div')
+        console.log(one.dataset.id)
+        console.log(one.dataset.spm)  // 通过dataset获取, String类型
+
+    </script>
+</body>
+</html>

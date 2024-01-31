@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // setInterval(要重复执行的函数的引用, 间隔的毫秒数)
+        // 用let获取定时器序号
+        // 不会阻碍程序进行, 类似多线程(实际是异步)
+        let n = setInterval(function() {
+            console.log("每1s执行一次")
+        }, 1000)   
+        
+        console.log(n)
+        clearInterval(n)   // 用序号关闭定时器
+
+    </script>
+</body>
+</html>

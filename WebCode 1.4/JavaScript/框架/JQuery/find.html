@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>中国连通</h1>
+        <div id="txt">Hi</div>
+    </div>
+    
+    <script src="./jquery-3.7.1.js"></script>
+    <script>
+        // 找到id=txt的标签
+        $("#txt")
+        // 可以同时选中多个标签, 用逗号隔开
+        
+        $("#txt").prev()   // 上一个
+        $("#txt").next()   // 下一个
+        $("#txt").siblings()   // 全部同级元素
+
+        $("#txt").parent()   // 父级
+        $("#txt").children()   // 最近一级子级
+        $("#txt").children(".p10")   // 最近一级子级中寻找class="p10"的
+        $("#txt").find(".p10")   // 全部子级中寻找class="p10"的
+    </script>
+</body>
+</html>

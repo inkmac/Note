@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <h3>输入框</h3>
+    <h3>当前的n值是: <span v-text="n"></span> </h3>
+    <button @click="n++">点我n+1</button>
+    <input type="text" v-fbind:value="n">
+  </div>
+  
+  <script src="../vue.js"></script>
+  <script>
+    new Vue({
+      el: "#container",
+      data: {
+        n: 1,
+      },
+      directives: {
+        fbind: {
+          //指令与元素成功绑定时（一上来）
+					bind(element,binding) {
+						element.value = binding.value
+					},
+					//指令所在元素被插入页面时
+					inserted(element,binding) {
+						element.focus()
+					},
+					//指令所在的模板被重新解析时
+					update(element,binding) {
+						element.value = binding.value
+					}
+        }
+      }
+      
+    })
+  </script>
+</body>
+</html>

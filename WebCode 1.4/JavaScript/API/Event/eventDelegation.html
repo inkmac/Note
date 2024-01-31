@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        li {
+            margin: 3px 0;
+            width: 80px;
+            height: 30px;
+            background-color: pink;
+
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>第1个</li>
+        <li>第2个</li>
+        <li>第3个</li>
+        <p>我被点击时不需要变色</p>
+    </ul>
+
+    <script>
+        const ul = document.querySelector('ul')
+
+        // 将点击li变色委托到父级ul上
+        ul.addEventListener('click', function(e) {
+            console.log(e.target)  // e.target 是点击的那个标签
+            
+            // 判断点击的标签是不是li, 如果是再变色 
+            if (e.target.tagName === 'LI') {   
+                e.target.style.color = 'blue'   
+            }
+        })
+
+        // 可以配合 data- 自定义属性使用, 进行判断
+    </script>
+</body>
+</html>

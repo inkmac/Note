@@ -1,5 +1,0 @@
-/* CSS书写顺序: 浏览器加载速度会变快
-1. 定位 / 浮动 / display
-2. 盒子模型: margin border padding 宽高背景色
-3. 文字样式
-*/

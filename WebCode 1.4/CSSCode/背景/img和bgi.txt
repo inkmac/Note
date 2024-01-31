@@ -1,4 +1,0 @@
-background-image和img的选择:
-
-对于重要的图片: 选择img
-对于一般的图片: 选择background-image

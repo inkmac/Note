@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="list-group"></ul>
+
+  <script>
+    // 1.组织查询参数字符串 (对象形式)
+    const qObj = {
+      pname: "江苏省",
+      cname: "南京市"
+    }
+
+    // 2.查询参数对象 -> 查询参数字符串
+    const paramsObj = new URLSearchParams(qObj)
+    const queryString = paramsObj.toString()
+    console.log(queryString)
+
+    // 3. 使用XHR对象，查询地区列表
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', `http://hmajax.itheima.net/api/area?${queryString}`)
+    xhr.addEventListener('loadend', () => {
+      console.log(xhr.response)
+      const data = JSON.parse(xhr.response)
+      console.log(data)
+
+      const htmlStr = data.list.map(areaName => {
+        return `<li class="list-group-item">${areaName}</li>`
+      }).join('')
+      console.log(htmlStr)
+      document.querySelector('.list-group').innerHTML = htmlStr
+    })
+    xhr.send()
+  </script>
+</body>
+</html>

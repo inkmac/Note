@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    let status = false
+    
+    // fn 会在 Promise 对象被创建的时候立即执行
+    const p = new Promise((resolve, reject) => {
+      if (status) {
+        // resolve的参数会被传入 then()的
+        resolve("Hello, i get the data")
+      } else {
+        reject("No, i lose the data")
+      }
+    })
+
+
+    p.then((res) => {
+      console.log(res)
+    }).catch((error) => {
+      console.log(error)
+    })
+  </script>
+</body>
+</html>

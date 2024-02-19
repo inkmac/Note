@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    async function getCityWeather() {
+      const bj = await axios({url: 'https://hmajax.itheima.net/api/weather', params: {city: '110100'}})
+      const sh = await axios({url: 'https://hmajax.itheima.net/api/weather', params: {city: '440100'}})
+      
+      // 用Promise.all使得多个axios请求同时发起, 而不是按顺序执行
+      // 用await等待所有的axios请求全部完成
+      // 最后返回的是解决后的Promise数组
+      const [bjObj, shObj] = await Promise.all([bj, sh])
+      
+      console.log(bjObj)
+      console.log(shObj)
+    } 
+
+    getCityWeather()
+  </script>
+</body>
+</html>

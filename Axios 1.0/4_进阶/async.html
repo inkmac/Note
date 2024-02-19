@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <span>省份：</span>
+    <select>
+      <option class="province"></option>
+    </select>
+    <span>城市：</span>
+    <select>
+      <option class="city"></option>
+    </select>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    /**  async和await语法的使用
+     *      1. 定义async函数  
+     *      2. await等待Promise对象成功的结果
+     *      3. 如果有多个await, 每个await会等待上一个await被解决后再执行
+     *      4. 用try-catch捕获错误
+     *      5. await只能用在async函数当中
+     */
+
+    async function getData() {
+      const pObj = await axios({url: 'https://hmajax.itheima.net/api/province'})
+      const pname = pObj.data.list[0]
+
+      const cObj = await axios({url: 'https://hmajax.itheima.net/api/city', params: {pname}})
+      const cname = cObj.data.list[0]
+
+      document.querySelector('.province').innerHTML = pname
+      document.querySelector('.city').innerHTML = cname
+    }
+
+    getData()
+  </script>
+</body>
+</html>

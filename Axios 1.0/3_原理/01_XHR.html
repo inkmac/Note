@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="province"></div>
+
+  <script>
+    // 1.创建 XMLHttpRequest 对象
+    const xhr = new XMLHttpRequest()
+
+    // 2.配置请求方法和请求的url网址
+    xhr.open('get', 'https://hmajax.itheima.net/api/province')
+
+    // 3.监听loadend事件, 接受响应结果
+    xhr.addEventListener('loadend', () => {
+      console.log(xhr.response)
+      // 用XHR获得取的数据是JSON格式的, 需要转换成JS对象
+      const dataObj = JSON.parse(xhr.response)
+      const dataStr = dataObj.list.join('<br>')
+      document.querySelector('#province').innerHTML = dataStr
+    })
+
+    // 4.发起XHR请求
+    xhr.send()
+  </script>
+</body>
+</html>

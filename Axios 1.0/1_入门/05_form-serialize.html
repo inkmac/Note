@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="form">
+    <input type="text" name="username">  <br>
+    <input type="password" name="password">  <br>
+    <input type="button" id="submit" value="submit">  <br>
+  </form>
+
+  <!-- 使用form-serialize插件, 快速收集所有的表单数据 -->
+  <script src="./form-serialize.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    document.querySelector('#submit').addEventListener('click', () => {
+      /**
+       * 参数1: 要获取哪个表单的数据
+       *    表单元素设置name属性，值会作为对象的属性名
+       *    建议name属性的值，最好和接口文档参数名一致
+       * 
+       * 参数2: 配置对象
+       *    hash 设置获取的数据结构
+       *       - true：JS对象（推荐）一般请求体里提交给服务器
+       *       - false: 查询字符串
+       *    empty 设置是否获取空值
+       *       - true: 会获取空值（推荐）数据结构和标签结构一致
+       *       - false：不会获取空值
+      */
+      const form = document.querySelector('#form')
+      const data = serialize(form, {hash: true, empty: true})
+      console.log(data)
+      console.log(typeof data)   // 为 Object 类型
+    })
+
+  </script>
+</body>
+</html>

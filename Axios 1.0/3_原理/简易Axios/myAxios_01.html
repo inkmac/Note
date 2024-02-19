@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    function myAxios(config) {
+      return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest()
+        // 检测是否输入method, 如果没有就默认给个 'get' 方法
+        xhr.open(config.method || 'get', config.url)
+        xhr.addEventListener('loadend', (e) => {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            resolve(JSON.parse(xhr.response))
+          } else {
+            reject(new Error(xhr.response))
+          }
+        })
+        xhr.send()
+      })
+    }
+
+    myAxios({
+      url: 'https://hmajax.itheima.net/api/province',
+    }).then((res) => {
+      console.log(res)
+    }).catch((err) => {
+      console.dir(err)
+    })
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <h2>人员列表(遍历数组)</h2>
+    <ul>
+      <li v-for="(p, index) in persons" :key="p.id">
+        {{p.name}} - {{p.age}}
+      </li>
+    </ul>
+
+    <h2>汽车信息(遍历对象)</h2>
+    <ul>
+      <li v-for="(v, k) in car" :key="k">
+        {{k}} - {{v}}
+      </li>
+    </ul>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script>
+    new Vue({
+      el: "#container",
+      data: {
+        persons: [
+          {id: '01', name: '张三', age: 18},
+          {id: '02', name: '李四', age: 19},
+          {id: '03', name: '王五', age: 20},
+        ],
+        car: {
+          name: "OOOO",
+          price: 8000000,
+          color: "black"
+        }
+      }
+    })
+  </script>
+</body>
+</html>

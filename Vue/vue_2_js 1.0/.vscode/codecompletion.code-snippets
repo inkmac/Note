@@ -1,0 +1,18 @@
+{
+		"new Vue() and container": {
+		"prefix": "Vue",
+		"body": [
+			"<div id=\"root\">",
+			"",
+			"</div>",
+			"",
+			"<script src=\"../vue.js\"></script>",
+			"<script>",
+			"  new Vue({",
+			"    el: '#root',",
+			"    $0",
+			"  })",
+			"</script>",
+		],
+	}
+}

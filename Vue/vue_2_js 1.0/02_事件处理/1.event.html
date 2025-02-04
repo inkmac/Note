@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button v-on:click="showInfo">button1 点我提示信息</button>    <!-- 不需要参数 -->
+    <button @click="showInfo2($event, 100)">button2 点我提示信息</button>   <!-- 传入参数 -->
+  </div>
+
+  <script src="../vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#root',
+      methods: {
+        showInfo(e) {
+          console.log(e)
+          console.log("HELLO")
+        },
+        showInfo2(e, number) {
+          console.log(e, number)
+        }
+      }
+    })
+  </script>
+</body>
+</html>

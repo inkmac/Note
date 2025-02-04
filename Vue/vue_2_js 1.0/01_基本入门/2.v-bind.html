@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 单向数据绑定 -->
+  <div id="root">
+    <a :href="server.url">{{server.url}} -> {{server.name}}</a>
+    <a v-bind:href="server.url"></a>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script>
+    new Vue({
+      el: '#root',
+      data: {
+        server: {
+          name: 'localhost',
+          url: 'http://127.0.0.1',
+        }
+      }
+    })
+
+  </script>
+</body>
+</html>

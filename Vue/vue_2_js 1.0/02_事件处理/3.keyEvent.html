@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    1.Vue中常用的按键别名
+        回车 => enter
+        删除 => delete (Backspace或者Delete)
+        退出 => esc
+        空格 => space
+        换行 => tab  (特殊, 必须配合keydown使用)
+        上 => up 
+        下 => down
+        左 => left
+        右 => right
+
+    2.Vue没有提供的按键, 可以用按键原始的key值去绑定, 但需要用kebab-case (短横线命名法)
+
+    3.系统修饰键 (用法特殊): ctrl alt shift meta
+        (1) 配合keyup使用, 再按下其他键, 随后释放其他键, 事件触发
+        (2) 配合keydown使用, 正常触发
+   -->
+  
+  <div id="container">
+    <input type="text" placeholder="按下enter提示输入" @keydown.enter="showInfo">
+    <!-- 同时按下两个按键才可以触发 -->
+    <input type="text" placeholder="按下ctrl+y提示输入" @keydown.ctrl.y="showInfo">
+  </div>
+
+  <script src="../vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#container',
+      methods: {
+        showInfo() {
+          alert("HELLO")
+        }
+      }
+    })
+  </script>
+</body>
+</html>

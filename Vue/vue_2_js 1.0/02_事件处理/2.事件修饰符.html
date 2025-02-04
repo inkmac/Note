@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    Vue的事件修饰符:
+      1.prevent: 阻止默认事件 (常用)
+      2.stop: 阻止事件冒泡 (常用)
+      3.once: 事件只能触发一次 (常用)
+      4.capture: 使用事件的捕获模式(从外向内执行)
+      5.self: 只有event.target是当前操作的元素才触发事件
+      6.passive: 事件默认行为立即执行, 无需等待事件回调执行完毕
+   -->
+
+  <div id="root">
+    <a href="https://chat.openai.com" @click.prevent="showInfo">点我提示信息</a>
+
+    <div id="test" @click="showInfo">
+      <!-- 既阻止冒泡, 也阻止默认行为 -->
+      <a href="https://chat.openai.com" @click.prevent.stop="showInfo">点我提示信息</a>
+    </div>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script>
+    new Vue({
+      el: '#root',
+      methods: {
+        showInfo() {
+          alert("HELLO")
+        }
+      }
+    })
+  </script>
+</body>
+</html>

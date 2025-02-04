@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <h2>今天天气很 {{info}}</h2>
+    <!-- 比较简单的函数, 可以直接写在里面 (只能使用vm中存在的属性) -->
+    <button @click="isHot = !isHot">切换天气</button>
+    <hr>
+    <h3>a的值是: {{nums.a}}</h3>
+    <button @click="nums.a++">点我让a加1</button>
+    <h3>b的值是: {{nums.b}}</h3>
+    <button @click="nums.b++">点我让b加1</button>
+  </div>
+
+  <script src="../vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#container',
+      data: {
+        isHot: true,
+        nums: {
+          a: 1,
+          b: 2,
+        },
+      },
+      computed: {
+        info() {
+          return this.isHot ? '热': '冷'
+        }
+      },
+
+      // 可以监视data和computed的值
+      watch: {
+        isHot: {
+          // immediate: true,  // 初始化时候自动调用handler
+          handler(newValue, oldValue) {    // handler 就是一个回调函数, 它会在 isHot 发生变化时被调用
+            console.log("isHot被修改了, handler就被调用啦", newValue, oldValue)
+          }
+        },
+        nums: {
+          // 监视多级结构中所有属性的变化
+          deep: true,
+          handler(n, o) {
+            console.log("nums其中之一改变了")
+          }
+        }
+      },
+    })
+
+    // 第二种方式
+    // vm.$watch('isHot', {
+    //   handler(newValue, oldValue) {
+    //     console.log("isHot被修改了, handler就被调用啦", newValue, oldValue);
+    //   }
+    // })
+  </script>
+</body>
+</html>
